@@ -7,11 +7,13 @@ module.exports = {
         const domainPing = require("domain-ping")
         const moment = require('moment')
 
-        const { MessageEmbed } = require('discord.js')
+        const {
+            MessageEmbed
+        } = require('discord.js')
 
         const embed = new MessageEmbed()
-        .setColor('36393E')
-        .setFooter(moment.utc(client.readyAt).format('LLLL') + ' UTC')
+            .setColor('36393E')
+            .setFooter(moment.utc(client.readyAt).format('LLLL') + ' UTC')
 
         domainPing('shiro.gg')
             .then((res) => {
