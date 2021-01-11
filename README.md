@@ -3,13 +3,14 @@ shiroDemo is a lightweight Discord bot using request to demonstrate usage of the
 
 A very simple core function allows for this
 
-```function sendImage(endpoint){
-            request('https://shiro.gg/api/images/' + endpoint, {
-                    json: true
-                }, (err, res, body) => {
-                    msg.channel.send(body.url)
-                } 
-            )}
+```
+function sendImage(endpoint) {
+    request('https://shiro.gg/api/images/' + endpoint, {
+        json: true
+    }, (err, res, body) => {
+        msg.channel.send(body.url)
+    })
+}
 ```
   
 The problem with this function is that it does not check for any errors, but if a valid endpoint is given it works correctly.  
