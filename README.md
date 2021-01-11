@@ -1,6 +1,5 @@
 # shiroDemo
-lightweight nodejs bot demonstrating usage of the [shiro.gg](https://shiro.gg) web api  
-A list of commands for this bot can be found in `x!help` or listed below.  
+shiroDemo is a lightweight Discord bot using request to demonstrate usage of the [Shiro.gg](https://shirogg/api.endpoints) API  
   
 ## Commands   
   
@@ -9,7 +8,7 @@ x!ping - shows the bots ping to Discord and to Shiro
 
 ### Api  
 x!endpoints - lists the avaliable endpoints
- 
+x!api [endpoint] - returns an image from the given endpoint
  
  ## Events  
  
