@@ -21,7 +21,7 @@ The problem with this function is that it does not check for any errors, but if 
 x!ping - shows the bots ping to Discord and to Shiro  
 
 ### Api  
-x!endpoints - lists the avaliable endpoints
+x!endpoints - lists the avaliable endpoints  
 x!api [endpoint] - returns an image from the given endpoint
  
  ## Events  
