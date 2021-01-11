@@ -1,0 +1,22 @@
+{
+    "sfw" : [
+        "avatars",
+        "blush",
+        "hug",
+        "kiss",
+        "neko",
+        "nom",
+        "pat",
+        "poke",
+        "pout",
+        "slap",
+        "smug",
+        "tickle",
+        "wallpapers"
+    ],
+    "nsfw" : [
+        "nsfw/bondage",
+        "nsfw/hentai",
+        "nsfw/thighs"
+    ]
+}
