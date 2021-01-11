@@ -1,0 +1,6 @@
+{
+    "token" : "x",
+    "prefix" : "y",
+    "devs" : ["z", "a"],
+    "startLogChannel" : "b"
+}
