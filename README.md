@@ -3,7 +3,7 @@ shiroDemo is a lightweight Discord bot using request to demonstrate usage of the
 
 A very simple core function allows for this
 
-```
+```js
 function sendImage(endpoint) {
     request('https://shiro.gg/api/images/' + endpoint, {
         json: true
