@@ -19,9 +19,10 @@ function sendImage(endpoint) {
 ```
 ## Shiro.gg API
 
-[### Base URL](https://shiro.gg/api)
-[### Endpoints](https://shiro.gg/api/endpoints)
 ### Rate Limit: 300 RPM
+[Base URL](https://shiro.gg/api)
+[Endpoints](https://shiro.gg/api/endpoints)
+
   
 ## Commands   
   
