@@ -1,0 +1,33 @@
+{
+  "name": "shirodemo",
+  "version": "1.0.0",
+  "description": "lightweight discord bot that demos the shiro.gg api written in node",
+  "main": "index.js",
+  "dependencies": {
+    "bufferutil": "^4.0.3",
+    "domain-ping": "^0.2.1",
+    "erlpack": "^0.1.3",
+    "enmap": "^5.8.2",
+    "fs": "^0.0.1-security",
+    "discord.js-light": "^3.5.0",
+    "moment": "^2.29.1",
+    "node-fetch": "^2.6.1",
+    "request": "^2.88.2",
+    "utf-8-validate": "^5.0.4",
+    "zlib-sync": "^0.1.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Trapss/shiroDemo.git"
+  },
+  "author": "iTrqPss",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Trapss/shiroDemo/issues"
+  },
+  "homepage": "https://github.com/Trapss/shiroDemo#readme"
+}

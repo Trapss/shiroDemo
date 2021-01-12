@@ -13,7 +13,7 @@ module.exports = {
             .setColor('36393E')
             .setFooter('https://shiro.gg/api')
             .addField('SFW /images Endpoints', 'avatars\nblush\nhug\nkiss\nneko\nnom\npat\npoke\npout\nslap\nsmug\ntickle\nwallpapers')
-            .addField('NSFW /images Endpoints', 'nsfw/bondage\n/sfw/hentai\nnsfw/thighs')
+            .addField('NSFW /images Endpoints', 'nsfw/bondage\nnsfw/hentai\nnsfw/thighs')
 
         msg.channel.send(embed)
 

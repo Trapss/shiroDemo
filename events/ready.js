@@ -15,4 +15,13 @@ module.exports = async (client) => {
         .setTitle(`${client.user.username} | Client Started`)
         .setFooter(`Ready at: ${moment.utc(client.readyAt).format('LLLL')} UTC`)
     await client.channels.forge(config.startLogChannel).send(embed)
+
+    client.user.setPresence({
+        game: { 
+            name: `for ${config.prefix}help`,
+            type: 'WATCHING'
+        },
+        status: 'idle'
+    })
+
 }

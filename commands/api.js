@@ -21,7 +21,13 @@ module.exports = {
             request('https://shiro.gg/api/images/' + endpoint, {
                 json: true
             }, (err, res, body) => {
-                msg.channel.send(body.url)
+                try {
+                    msg.channel.send(body.url)
+                } catch (e) {
+                    console.error(e)
+                    msg.channel.send("There was an error fetching your image, please try again later.")
+                }
+                
             })
         }
 
