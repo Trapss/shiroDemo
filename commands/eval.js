@@ -1,6 +1,6 @@
 module.exports = {
     name: 'eval',
-    description: 'execute js',
+    description: 'Execute js code from within discord',
     category: "developer",
     aliases: ['execute'],
     execute(client, msg, args) {

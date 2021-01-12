@@ -1,6 +1,6 @@
 module.exports = {
     name: 'ping',
-    description: 'return ping to the apis used by the bot',
+    description: 'Return ping to Discord and to Shiro',
     category: "util",
     aliases: [],
     execute(client, msg) {

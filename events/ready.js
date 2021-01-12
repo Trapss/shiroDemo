@@ -11,11 +11,16 @@ module.exports = async (client) => {
     console.log('bot ready')
     console.log('===================')
 
-    embed.setColor('36393E')
+    try {
+        embed.setColor('36393E')
         .setTitle(`${client.user.username} | Client Started`)
         .setFooter(`Ready at: ${moment.utc(client.readyAt).format('LLLL')} UTC`)
     await client.channels.forge(config.startLogChannel).send(embed)
-
+    } catch (e) {
+        console.log('unable to post client start notification')
+        console.log('===================')
+    }
+    
     client.user.setPresence({
         game: { 
             name: `for ${config.prefix}help`,
