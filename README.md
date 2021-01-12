@@ -27,8 +27,11 @@ x!info - shows info about the bot and the shiro.gg api
 
 ### Api  
 x!endpoints - lists the avaliable endpoints  
-x!api [endpoint] - returns an image from the given endpoint
- 
+x!api {endpoint} - returns an image from the given endpoint
+   
+### Developer  
+x!eval {code} - evalulate js code  
+    
  ## Events  
  
  message.js - handles commands  
