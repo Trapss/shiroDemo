@@ -36,3 +36,4 @@ x!eval {code} - evalulate js code
  
  message.js - handles commands  
  ready.js - sends a message to a log channel with a timestamp when the client is ready  
+ guildMemberAdd.js - autorole for the shiro.gg server
