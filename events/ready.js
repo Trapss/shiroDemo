@@ -21,12 +21,5 @@ module.exports = async (client) => {
         console.log('===================')
     }
     
-    client.user.setPresence({
-        game: { 
-            name: `for ${config.prefix}help`,
-            type: 'WATCHING'
-        },
-        status: 'idle'
-    })
-
+    client.user.setActivity(`for ${config.prefix}help`, { type: 'WATCHING' })
 }
