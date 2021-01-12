@@ -5,16 +5,16 @@ A very simple core function allows for this
 
 ```js
 function sendImage(endpoint) {
-    try {
-        request('https://shiro.gg/api/images/' + endpoint, {
-            json: true
-        }, (err, res, body) => {
+    request('https://shiro.gg/api/images/' + endpoint, {
+        json: true
+    }, (err, res, body) => {
+        if (err) {
+            console.error(e)
+            msg.channel.send("There was an error fetching your image, please try again later.")
+        } else {
             msg.channel.send(body.url)
-        })
-    } catch (e) {
-        console.error(e)
-        msg.channel.send("There was an error fetching your image, please try again later.")
-    }
+        }
+    })
 }
 ```
   
