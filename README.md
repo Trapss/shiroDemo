@@ -23,6 +23,7 @@ function sendImage(endpoint) {
 ### Utility  
 x!help - shows help command   
 x!ping - shows the bots ping to Discord and to Shiro  
+x!info - shows info about the bot and the shiro.gg api
 
 ### Api  
 x!endpoints - lists the avaliable endpoints  
