@@ -17,19 +17,18 @@ module.exports = {
             .setColor('36393E')
             .setFooter('https://shiro.gg/api')
 
-        function sendImage(endpoint) {
-            request('https://shiro.gg/api/images/' + endpoint, {
-                json: true
-            }, (err, res, body) => {
-                try {
-                    msg.channel.send(body.url)
-                } catch (e) {
-                    console.error(e)
-                    msg.channel.send("There was an error fetching your image, please try again later.")
-                }
-                
-            })
-        }
+            function sendImage(endpoint) {
+                request('https://shiro.gg/api/images/' + endpoint, {
+                    json: true
+                }, (err, res, body) => {
+                    if (err || body.status !== 200) {
+                        console.error(err)
+                        msg.channel.send("There was an error fetching your image, please try again later.")
+                    } else {
+                        msg.channel.send(body.url)
+                    }
+                })
+            }
 
         if (endpointsList.sfw.includes(args[0])) {
             sendImage(args[0])
