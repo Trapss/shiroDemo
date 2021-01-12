@@ -15,6 +15,7 @@ module.exports = {
 
         // util commands
         const ping = require('./ping')
+        const info = require('./info')
 
         // dev commands
         const eval = require('./eval')
@@ -24,7 +25,7 @@ module.exports = {
             .setFooter('https://shiro.gg/')
             .addField("API Commands", `endpoints - ${endpoints.description}\napi {endpoint} - ${api.description}`)
             .addField("Utility Commands", `ping - ${ping.description}`)
-            .addField("Developer Commands", `eval {code} - ${eval.description}`)
+            .addField("Developer Commands", `eval {code} - ${eval.description}\ninfo - ${info.description}`)
         msg.channel.send(embed)
 
     }
