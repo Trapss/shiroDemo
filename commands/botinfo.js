@@ -1,6 +1,7 @@
 const {
-    MessageEmbed, Discord
-} = require('discord.js');
+    MessageEmbed
+} = require('discord.js')
+const Discord = require('discord.js')
 const os = require('os')
 const moment = require('moment')
 const domainPing = require("domain-ping")

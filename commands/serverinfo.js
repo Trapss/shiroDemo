@@ -1,6 +1,7 @@
 const {
     MessageEmbed
-} = require('discord.js');
+} = require('discord.js')
+const moment = require('moment')
 module.exports = {
     name: 'botinfo',
     description: 'Get current server info and statistics',
