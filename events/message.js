@@ -6,6 +6,9 @@ const request = require('request')
 module.exports = (client, msg) => { 
 
     function sendImage(endpoint) {
+
+        if (endpoints.nsfw.includes(endpoint)) { endpoint = 'nsfw/' + endpoint}
+
         request('https://shiro.gg/api/images/' + endpoint, {
             json: true
         }, (err, res, body) => {
