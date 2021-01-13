@@ -34,7 +34,7 @@ x!serverinfo - shows different server stats
 
 ### Api  
 x!endpoints - lists the avaliable endpoints  
-x!api {endpoint} - returns an image from the given endpoint
+x!{endpoint} - returns an image from the given endpoint
    
 ### Developer  
 x!eval {code} - evalulate js code  

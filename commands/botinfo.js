@@ -25,8 +25,8 @@ module.exports = {
             .addField('Days up', Math.floor((process.uptime() % 31536000) / 86400), true)
             .addField('Discord API Ping', Math.floor(client.ws.ping) + 'ms', true)
             .addField('Command Count', client.commands.size, true)
-            .addField('CPU Core Count', os.cpus().length, true)
             .addField('Event Count', client.events.size, true)
+            .addField('CPU Core Count', os.cpus().length, true)           
         msg.channel.send(embed)
     },
 }

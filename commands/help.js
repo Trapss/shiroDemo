@@ -11,7 +11,6 @@ module.exports = {
 
         // api commands
         const endpoints = require('./endpoints')
-        const api = require('./api')
 
         // util commands
         const ping = require('./ping')
@@ -25,7 +24,7 @@ module.exports = {
         const embed = new MessageEmbed()
             .setColor('36393E')
             .setFooter('https://shiro.gg/')
-            .addField("API Commands", `endpoints - ${endpoints.description}\napi {endpoint} - ${api.description}`)
+            .addField("API Commands", `endpoints - ${endpoints.description}\n{endpoint} - grab an image from inputted endpoint`)
             .addField("Utility Commands", `ping - ${ping.description}\ninfo - ${info.description}\nserverinfo - ${si.description}\nbotinfo - ${bi.description}`)
             .addField("Developer Commands", `eval {code} - ${eval.description}`)
         msg.channel.send(embed)
