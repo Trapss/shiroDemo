@@ -11,6 +11,7 @@ module.exports = async (client) => {
     console.log('bot ready')
     console.log('===================')
 
+
     try {
         embed.setColor('36393E')
         .setTitle(`${client.user.username} | Client Started`)
