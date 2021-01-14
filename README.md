@@ -1,4 +1,4 @@
-# shiroDemo
+# shiroDemo (0.0.1)
 shiroDemo is a lightweight Discord bot using request to demonstrate usage of the [Shiro.gg](https://shirogg/api.endpoints) API  
 
 A very simple core function allows for this, that can be found in the message.js event file
