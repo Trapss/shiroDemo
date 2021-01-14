@@ -15,7 +15,7 @@ module.exports = {
             .setColor('36393e')
             .setTitle(g.name)
             .setFooter('ID: ' + g.id)
-            .addField("Created At", moment.utc(g.createdAt).format('LLLL'))
+            .addField("Created At", moment.utc(g.createdAt).format('LLLL') + ' UTC')
             .addField('Owner', g.owner)
         msg.channel.send(embed)
 

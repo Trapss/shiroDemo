@@ -3,11 +3,12 @@ const endpoints = require("../endpoints.json")
 
 const request = require('request')
 
-module.exports = (client, msg) => { 
+module.exports = (client, msg) => {
 
     function sendImage(endpoint) {
-
-        if (endpoints.nsfw.includes(endpoint)) { endpoint = 'nsfw/' + endpoint}
+        if (endpoints.nsfw.includes(endpoint)) {
+            endpoint = 'nsfw/' + endpoint
+        }
 
         request('https://shiro.gg/api/images/' + endpoint, {
             json: true
@@ -24,8 +25,7 @@ module.exports = (client, msg) => {
     if (msg.author.bot || msg.content.indexOf(config.prefix) !== 0) return
 
     const args = msg.content.slice(config.prefix.length).trim().split(/ +/)
-
-        const commandName = args.shift().toLowerCase()
+    const commandName = args.shift().toLowerCase()
 
     if (endpoints.sfw.includes(commandName)) {
         sendImage(commandName)
@@ -37,15 +37,15 @@ module.exports = (client, msg) => {
         }
     } else {
         const command = client.commands.get(commandName) ||
-        client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName))
+            client.commands.find(cmd => cmd.aliases && cmd.aliases.includes(commandName))
 
         if (!command) return
 
-        try { command.execute(client, msg, args) } catch (e) {
+        try {
+            command.execute(client, msg, args)
+        } catch (e) {
             console.error(e)
             msg.channel.send('I was unable to process this command, try again?')
         }
     }
-
-        
 }
