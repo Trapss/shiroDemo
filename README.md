@@ -4,21 +4,22 @@ shiroDemo is a lightweight Discord bot using request to demonstrate usage of the
 A very simple core function allows for this, that can be found in the message.js event file
 
 ```js
-   function sendImage(endpoint) {
-
-        if (endpoints.nsfw.includes(endpoint)) { endpoint = 'nsfw/' + endpoint}
-
-        request('https://shiro.gg/api/images/' + endpoint, {
-            json: true
-        }, (err, res, body) => {
-            if (err || body.code !== 200) {
-                console.error(err)
-                msg.channel.send("There was an error fetching your image, please try again later.")
-            } else {
-                msg.channel.send(body.url)
-            }
-        })
+function sendImage(endpoint) {
+    if (endpoints.nsfw.includes(endpoint)) {
+      // eslint-disable-next-line no-param-reassign
+      endpoint = `nsfw/${endpoint}`;
     }
+
+    request(`https://shiro.gg/api/images/${endpoint}`, {
+      json: true,
+    }, (err, res, body) => {
+      if (err || body.code !== 200) {
+        msg.channel.send('There was an error fetching your image, please try again later.');
+      } else {
+        msg.channel.send(body.url);
+      }
+    });
+  }
 ```
 ## Shiro.gg API
 
