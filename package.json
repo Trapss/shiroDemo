@@ -5,18 +5,23 @@
   "main": "index.js",
   "dependencies": {
     "bufferutil": "^4.0.3",
-    "domain-ping": "^0.2.1",
-    "erlpack": "^0.1.3",
-    "enmap": "^5.8.2",
-    "fs": "^0.0.1-security",
+    "discord.js": "^12.5.1",
     "discord.js-light": "^3.5.0",
+    "domain-ping": "^0.2.1",
+    "enmap": "^5.8.2",
+    "erlpack": "^0.1.3",
+    "fs": "^0.0.1-security",
     "moment": "^2.29.1",
     "node-fetch": "^2.6.1",
     "request": "^2.88.2",
     "utf-8-validate": "^5.0.4",
     "zlib-sync": "^0.1.7"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "eslint": "^7.17.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1"
+  },
   "scripts": {
     "start": "node ."
   },
