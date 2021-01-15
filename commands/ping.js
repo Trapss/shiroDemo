@@ -14,7 +14,7 @@ module.exports = {
       .setColor('36393E')
       .setFooter(`${moment.utc(client.readyAt).format('LLLL')} UTC`);
 
-    domainPing('shiro.gg')
+    domainPing('shiro.gg/api')
       .then((res) => {
         embed.addField('Discord API', `${Math.floor(client.ws.ping)}ms`, true);
         embed.addField('Shiro.gg API', `${Math.floor(res.ping_time)}ms`, true);
