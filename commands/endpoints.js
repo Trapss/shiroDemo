@@ -2,6 +2,8 @@ const {
   MessageEmbed,
 } = require('discord.js');
 
+const epts = require('../endpoints.json');
+
 module.exports = {
   name: 'endpoints',
   description: 'List of the shiro.gg api endpoints',
@@ -10,9 +12,9 @@ module.exports = {
   execute(client, msg) {
     const embed = new MessageEmbed()
       .setColor('36393E')
-      .setFooter('https://shiro.gg/api')
-      .addField('SFW /images/ Endpoints', 'avatars\nblush\nhug\nkiss\nneko\nnom\npat\npoke\npout\nslap\nsmug\ntickle\nwallpapers')
-      .addField('NSFW /images/nsfw/ Endpoints', 'bondage\nhentai\nthighs');
+      .setFooter('https://shiro.gg/')
+      .addField('SFW /images/ Endpoints', epts.sfw.join('\n'))
+      .addField('NSFW /images/nsfw/ Endpoints', epts.nsfw.join('\n'));
 
     msg.channel.send(embed);
   },
