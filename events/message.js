@@ -1,23 +1,25 @@
-const request = require('request');
+const fetch = require('node-fetch');
 const config = require('../config.json');
 const endpoints = require('../endpoints.json');
 
 module.exports = (client, msg) => {
+  function post(json) {
+    if (json.code !== 200) {
+      msg.channel.send('There was an error fetching your image, please try again later.');
+    } else {
+      msg.channel.send(json.url);
+    }
+  }
+
   function sendImage(endpoint) {
     if (endpoints.nsfw.includes(endpoint)) {
       // eslint-disable-next-line no-param-reassign
       endpoint = `nsfw/${endpoint}`;
     }
 
-    request(`https://shiro.gg/api/images/${endpoint}`, {
-      json: true,
-    }, (err, res, body) => {
-      if (err || body.code !== 200) {
-        msg.channel.send('There was an error fetching your image, please try again later.');
-      } else {
-        msg.channel.send(body.url);
-      }
-    });
+    fetch(`https://shiro.gg/api/images/${endpoint}`)
+      // eslint-disable-next-line arrow-parens
+      .then(res => res.json()).then(json => post(json));
   }
 
   if (msg.author.bot || msg.content.indexOf(config.prefix) !== 0) return;

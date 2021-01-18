@@ -1,25 +1,26 @@
 # shiroDemo (0.0.1)
 shiroDemo is a lightweight Discord bot using request to demonstrate usage of the [Shiro.gg](https://shirogg/api.endpoints) API  
-i know request is depracated  
-
-A very simple core function allows for this, that can be found in the message.js event file
+  
+A very simple set of core functions allows for this, that can be found in the message.js event file
 
 ```js
+function post(json) {
+    if (json.code !== 200) {
+      msg.channel.send('There was an error fetching your image, please try again later.');
+    } else {
+      msg.channel.send(json.url);
+    }
+  }
+
 function sendImage(endpoint) {
     if (endpoints.nsfw.includes(endpoint)) {
       // eslint-disable-next-line no-param-reassign
       endpoint = `nsfw/${endpoint}`;
     }
 
-    request(`https://shiro.gg/api/images/${endpoint}`, {
-      json: true,
-    }, (err, res, body) => {
-      if (err || body.code !== 200) {
-        msg.channel.send('There was an error fetching your image, please try again later.');
-      } else {
-        msg.channel.send(body.url);
-      }
-    });
+    fetch(`https://shiro.gg/api/images/${endpoint}`)
+      // eslint-disable-next-line arrow-parens
+      .then(res => res.json()).then(json => post(json));
   }
 ```
 ## Shiro.gg API
@@ -46,5 +47,5 @@ x!eval {code} - evalulate js code
     
 ## Events  
  
- message.js - handles commands  
+ message.js - handles commands and api usage  
  ready.js - sends a message to a log channel with a timestamp when the client is ready  
